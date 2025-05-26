@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <h1>Cover to Cover</h1>
+
+  <div id="form-area">
+
+    <label for="mode-select">Choose action:</label>
+
+    <select id="mode-select">
+        <option value="search">Search Books</option>
+        <option value="add">Add a Book</option>
+        <option value="delete">Delete a Book</option>
+        <option value="edit">Edit a Book</option>
+    </select>
+
+    <form id="book-form">
+      <div class="form-field" id="book-search-div">
+        <label for="book-search" id="book-search">Search for a book.</label>
+        <input type="text" name="book-name" id="book-name" />
+      </div>
+      <div class="form-field" id="book-add-div">
+        <label for="book-add">Add your book's title.</label>
+        <input type="text" name="added-book" id="title-add" />
+        <label for="book-add">Add your book's author.</label>
+        <input type="text" name="added-book" id="author-add" />
+        <label for="book-add">Add a shelf tag ('TBR', 'Read', etc.).</label>
+        <input type="text" name="added-book" id="shelf-add" />
+      </div>
+      <div class="form-field" id="book-delete-div">
+        <label for="book-delete">Enter an ID to remove that book from your collection.</label>
+        <input type="number" name="deleted-book" id="deleted-book" />
+      </div>
+      <div class="form-field" id="book-edit-div">
+        <label for="book-edit">Enter ID of the book you wish to edit.</label>
+        <input type="number" name="edited-book" id="edit-book" min="1"/>
+        <label for="edit-target">
+          <select id="edit-target">
+            <option value="title">Update Title</option>
+            <option value="author">Update Author</option>
+            <option value="shelf">Update Shelf</option>
+          </select>
+        </label>
+        <input type="text" name="edit-target" id="edit-book-value" />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+  </div>
+
+  <div id="content-area">
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
